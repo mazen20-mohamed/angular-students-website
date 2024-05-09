@@ -6,7 +6,7 @@ This project uses this technology:
  - Angular
 
 # 💻 Commands
-  npm install
-  npm i json-server
-  npx json-server db.json
-  ng server -o
+- npm install
+- npm i json-server
+- npx json-server db.json
+- ng server -o
