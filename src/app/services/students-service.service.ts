@@ -10,16 +10,12 @@ export class StudentsServiceService {
   constructor(private readonly http:HttpClient) {
   }
 
-
   private readonly DB_LINK = "http://localhost:3000/students";
   
-  // students : {id:number,name:string,age:number,email:string} = ;
-  // students = new BehaviorSubject({});
+  // students = new BehaviorSubject({id:"1",name:"",age:"",email:""});
   
   // setData(data: {id:string,name:string,age:string,email:string}) {
   //   this.students.next(data);
-  //   console.log(data);
-  //   console.log(this.students);
   // }
 
   // currentStudent = this.students.asObservable();

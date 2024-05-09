@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { StudentsServiceService } from '../services/students-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Subscribable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-student-details',
@@ -15,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 export class StudentDetailsComponent implements OnInit{
   ID =  0;
   student:any;
-  
+  // subscription: Subscription = new Subscription();
   constructor(myActived : ActivatedRoute , private studentService:StudentsServiceService,private router: Router){
     this.ID = myActived.snapshot.params["id"];
   }
@@ -29,6 +30,7 @@ export class StudentDetailsComponent implements OnInit{
         console.log(err);
       }
     });
+    // this.subscription = this.studentService.currentStudent.subscribe(message => this.student = message)
   }
   deleteStudent(){
     this.studentService.deleteUserById(this.ID).subscribe({
