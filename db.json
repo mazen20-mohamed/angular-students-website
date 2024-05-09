@@ -1,0 +1,40 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Mohamed",
+      "age": "23",
+      "email": "mohamedali@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "Ahmed",
+      "age": "23",
+      "email": "ahmedeldessouky@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "string",
+      "age": "22",
+      "email": "m@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "Basma",
+      "age": "23",
+      "email": "basma@gmail.com"
+    },
+    {
+      "id": "5",
+      "name": "Sama",
+      "age": "11",
+      "email": "sama@gmail.com"
+    },
+    {
+      "id": "c348095c-692b-4984-a2a1-3ccbb1c50cba",
+      "email": "ali@gmail.com",
+      "name": "ali",
+      "age": 25
+    }
+  ]
+}

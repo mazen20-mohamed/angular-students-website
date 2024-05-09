@@ -1,0 +1,56 @@
+@if(student){
+    <div style="margin-top: 50px;">
+        <div class="card m-3 mx-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Name: {{student.name}}</h5>
+            <p class="card-text">Email: {{student.email}}</p>
+            <p class="card-text">Age: {{student.age}}</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-success m-4" (click)="update()">Update</button>
+          <button class="btn btn-danger m-4" type="button" data-bs-toggle="modal" data-bs-target="#deleteCheck">Delete</button>
+        </div>
+      <!-- Modal -->
+      <div class="modal fade" id="deleteCheck" tabindex="-1" aria-labelledby="deleteCheckLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteCheckLabel">Delete Student</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure to delete student {{student.name}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteSuccess" (click)="deleteStudent()">Yes</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" tabindex="-1" id="deleteSuccess" aria-labelledby="deleteSuccessLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Student deleted!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Student Has deleted successfully</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="deleteSuccess()">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+}
+@else{
+  <div class="d-flex align-items-center">
+    <strong>Loading...</strong>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  </div>
+}

@@ -1,0 +1,14 @@
+.add{
+    color: green;
+    font-size: 80px !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.add:hover{
+    color: red;
+    cursor: pointer;
+}

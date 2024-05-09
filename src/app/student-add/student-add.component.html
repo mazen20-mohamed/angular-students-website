@@ -1,0 +1,30 @@
+<div class="form m-5">
+    <div class="m-3 w-75">
+        <label for="name" class="form-label">Student Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="student.name" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="m-3 w-75">
+        <label for="email" class="form-label">Student Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="student.email" [ngModelOptions]="{standalone: true}" aria-describedby="emailHelp">
+    </div>
+    <div class="m-3 w-75">
+        <label for="age" class="form-label">Student Age</label> 
+        <input type="number" class="form-control" id="age" [(ngModel)]="student.age" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button class="btn btn-primary m-4"  data-bs-toggle="modal" data-bs-target="#saveSuccess" (click)="saveStudent()">Save</button>
+    <button class="btn btn-danger m-4" type="button" routerLink="/students">Exit</button>
+
+    <div class="modal" tabindex="-1" id="saveSuccess" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Student Added!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" routerLink="/students"></button>
+            </div>
+            <div class="modal-body">
+              <p>Student Has Added successfully</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
